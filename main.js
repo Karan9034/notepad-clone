@@ -8,7 +8,7 @@ const createWindow = () => {
 	win = new BrowserWindow({
 		title: "Notepad",
 		show: false,
-		icon: 'icon.png',
+		icon: 'icon.ico',
 		webPreferences: {
 			nodeIntegration: true,
 			contextIsolation:false

@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karan9034/notepad-clone"
+  },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . Notepad --all --ignore=node_modules --asar --out=dist --icon=icon"
   },
   "author": "Karan Agrawal",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "electron-packager": "^15.2.0",
     "electron": "^12.0.1"
   }
 }
