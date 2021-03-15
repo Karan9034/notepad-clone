@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, ipcMain, dialog } = require('electron')
+const { app, BrowserWindow, Menu, ipcMain, dialog, shell } = require('electron')
 const fs = require('fs')
 const path = require('path')
 let win
@@ -165,7 +165,37 @@ let template = [
 				click: ()=>{app.quit()}
 			},
 		]
-
+	},
+	{
+		label: 'Edit',
+		submenu: [
+			{
+				role: 'undo'
+			},
+			{
+				role: 'redo'
+			},
+			{
+				role: 'cut'
+			},
+			{
+				role: 'copy'
+			},
+			{
+				role: 'paste'
+			}
+		]
+	},
+	{
+		label: 'About',
+		submenu:[
+			{
+				label: 'View Source',
+				click(){
+					shell.openExternal('https://github.com/Karan9034/notepad-clone')
+				}
+			}
+		]
 	}
 ]
 let menu = Menu.buildFromTemplate(template)
