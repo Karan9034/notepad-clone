@@ -1,0 +1,14 @@
+{
+  "name": "notepad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Karan Agrawal",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^12.0.1"
+  }
+}
